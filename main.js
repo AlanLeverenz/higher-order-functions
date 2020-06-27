@@ -69,11 +69,67 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 // Get companies over 10 years
 
-const tenyearCompanies = companies.filter(
-  (company) => company.end - company.start >= 10
-);
-console.log(tenyearCompanies);
+// const tenyearCompanies = companies.filter(
+//   (company) => company.end - company.start >= 10
+// );
+// console.log(tenyearCompanies);
 
 //map *****
+
+// const companyNames = companies.map(function (company) {
+//   return company.name;
+// });
+// console.log(companyNames);
+
+// get an array of 1's (one for each company)
+// const testMap = companies.map(function (company) {
+//   return 1;
+// });
+// console.log(testMap);
+
+// get an array of name and end date
+// const testMap = companies.map(function (company) {
+//   return `${company.name} [${company.start} - ${company.end}]`;
+// });
+// console.log(testMap);
+
+// shorthand method
+// const testMap = companies.map(
+//   (company) => `${company.name} [${company.start} - ${company.end}]`
+// );
+// console.log(testMap);
+
+// using ages
+// const agesSquare = ages.map((age) => Math.sqrt(age));
+// console.log(agesSquare);
+
+// const agesTimesTwo = ages.map((age) => age * 2);
+// console.log(agesTimesTwo);
+
+// // combine maps
+// const ageMap = ages.map((age) => Math.sqrt(age)).map((age) => age * 2);
+// console.log(ageMap);
+
 //sort *****
+// const sortedCompanies = companies.sort(function (c1, c2) {
+//   if (c1.start > c2.start) {
+//     return 1;
+//   } else {
+//     return -1;
+//   }
+// });
+// console.log(sortedCompanies);
+
+// shorter version
+// const sortedCompanies = companies.sort((a, b) => (a.start > b.start ? 1 : -1));
+// console.log(sortedCompanies);
+
+// sort ages (lexical)
+// const sortAges = ages.sort();
+// console.log(sortAges);
+
+// numeric sort
+const sortAges = ages.sort((a, b) => a - b);
+console.log(sortAges);
+
 //reduce *****
