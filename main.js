@@ -24,6 +24,7 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 // filter *****
 
+// GET 21 AND OLDER
 // let canDrink = [];
 // for (let i = 0; i < ages.length; i++) {
 //   if (ages[i] >= 21) {
@@ -39,8 +40,39 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 // });
 // console.log(canDrink);
 
-const canDrink = ages.filter((age) => age >= 21);
-console.log(canDrink);
+// const canDrink = ages.filter((age) => age >= 21);
+// console.log(canDrink);
+
+// FILTER RETAIL COMPANIES
+
+// const retailCompanies = companies.filter(function (company) {
+//   if (company.category === 'Retail') {
+//     return true;
+//   }
+// });
+
+// console.log(retailCompanies);
+
+// ES6 VERSION
+
+// const retailCompanies = companies.filter(
+//   (company) => company.category === 'Retail'
+// );
+// console.log(retailCompanies);
+
+// Get 80s companies
+
+// const eightiesCompanies = companies.filter(
+//   (company) => company.start > 1979 && company.start < 1990
+// );
+// console.log(eightiesCompanies);
+
+// Get companies over 10 years
+
+const tenyearCompanies = companies.filter(
+  (company) => company.end - company.start >= 10
+);
+console.log(tenyearCompanies);
 
 //map *****
 //sort *****
