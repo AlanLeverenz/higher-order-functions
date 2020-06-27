@@ -129,7 +129,44 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 // console.log(sortAges);
 
 // numeric sort
-const sortAges = ages.sort((a, b) => a - b);
-console.log(sortAges);
+// const sortAges = ages.sort((a, b) => a - b);
+// console.log(sortAges);
 
 //reduce *****
+
+// let ageSum = 0;
+// for (let i = 0; i < ages.length; i++) {
+//   ageSum += ages[i];
+// }
+// console.log(ageSum);
+
+// const ageSum = ages.reduce(function (total, age) {
+//   return total + age;
+// }, 0);
+// console.log(ageSum);
+
+// shorter version
+// const ageSum = ages.reduce((total, age) => total + age, 0);
+// console.log(ageSum);
+
+// Get total years for all companies
+// const totalYears = companies.reduce(function (total, company) {
+//   return total + (company.end - company.start);
+// }, 0);
+// console.log(totalYears);
+
+// shorter method
+// const totalYears = companies.reduce(
+//   (total, company) => total + (company.end - company.start),
+//   0
+// );
+// console.log(totalYears);
+
+// COMBINE METHODS
+const combined = ages
+  .map((age) => age * 2)
+  .filter((age) => age >= 40)
+  .sort((a, b) => a - b)
+  .reduce((a, b) => a + b, 0);
+
+console.log(combined);
